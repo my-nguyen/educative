@@ -52,8 +52,8 @@ class CountPathsForASum {
         @JvmStatic
         fun main(args: Array<String>) {
             val arrays = arrayOf(
-                arrayOf(intArrayOf(1), intArrayOf(7, 9), intArrayOf(6, 5, 2, 3)),
-                arrayOf(intArrayOf(12), intArrayOf(7, 1), intArrayOf(4, -1, 10, 5)),
+                arrayOf(intArrayOf(1), intArrayOf(7,9), intArrayOf(6,5,2,3)),
+                arrayOf(intArrayOf(12), intArrayOf(7,1), intArrayOf(4,-1,10,5)),
             )
             val sums = arrayOf(12, 11)
             for (i in arrays.indices) {

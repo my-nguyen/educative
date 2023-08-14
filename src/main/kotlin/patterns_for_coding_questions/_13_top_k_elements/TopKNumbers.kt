@@ -39,16 +39,17 @@ class TopKNumbers {
     // complexity of our algorithm will be O(K∗logK + (N−K)∗logK) since, first, we insert ‘K’ numbers in the heap and
     // then iterate through the remaining numbers and at every step, in the worst case, we need to extract the minimum
     // number and insert a new number in the heap. This algorithm is better than O(N∗logN).
-    private fun educative(array: IntArray, top: Int): List<Int> {
+    private fun educative(array: IntArray, k: Int): List<Int> {
         val minHeap = PriorityQueue<Int>()
-        // put first 'top' numbers in the min heap
-        for (i in 0 until top) {
+        // put first 'k' numbers from array into minHeap
+        for (i in 0 until k) {
             minHeap.offer(array[i])
         }
 
         // go through the remaining numbers of the array, if the number from the array is bigger than the top (smallest)
-        // number of the min-heap, remove the top number from heap and add the number from array
-        for (i in top..array.lastIndex) {
+        // number of the min-heap, remove the top number from heap and add the number from array. if the number is
+        // smaller or equal to the top, ignore it.
+        for (i in k..array.lastIndex) {
             if (array[i] > minHeap.peek()) {
                 minHeap.poll()
                 minHeap.add(array[i])

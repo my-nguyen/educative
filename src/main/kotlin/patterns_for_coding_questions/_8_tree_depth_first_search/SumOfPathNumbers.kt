@@ -61,8 +61,8 @@ class SumOfPathNumbers {
         @JvmStatic
         fun main(args: Array<String>) {
             val arrays = arrayOf(
-                arrayOf(intArrayOf(1), intArrayOf(7, 9), intArrayOf(-1, -1, 2, 9)),
-                arrayOf(intArrayOf(1), intArrayOf(0, 1), intArrayOf(1, -1, 6, 5)),
+                arrayOf(intArrayOf(1), intArrayOf(7,9), intArrayOf(-1,-1,2,9)),
+                arrayOf(intArrayOf(1), intArrayOf(0,1), intArrayOf(1,-1,6,5)),
             )
             for (i in arrays.indices) {
                 val root = TreeNode.build(arrays[i])

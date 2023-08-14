@@ -23,18 +23,21 @@ class FindTheMedianOfANumberStream {
         private val maxHeap = PriorityQueue<Int> { o1, o2 -> o2 - o1 }
 
         fun insert(number: Int) {
+            // 1. insert: maxHeap will contain small entries, and minHeap all big entries
+            // the very first entry, and those that are smaller than maxHeap max go into maxHeap
             if (maxHeap.isEmpty() || number <= maxHeap.peek()) {
-                // maxHeap to contain more elements than minHeap
                 maxHeap.offer(number)
             } else {
+                // the entries that are bigger than maxHeap max go to minHeap
                 minHeap.offer(number)
             }
 
-            // balance the 2 heaps: either both heaps have the same number of elements or maxHeap will have one more
-            // element than minHeap
+            // 2: balance: so that maxHeap either has 0 or 1 more entries than minHeap
+            // maxHeap cannot have more than 1 element than minHeap
             if (maxHeap.size > minHeap.size + 1) {
                 minHeap.offer(maxHeap.poll())
             } else if (maxHeap.size < minHeap.size) {
+                // maxHeap cannot have fewer elements than minHeap
                 maxHeap.offer(minHeap.poll())
             }
         }

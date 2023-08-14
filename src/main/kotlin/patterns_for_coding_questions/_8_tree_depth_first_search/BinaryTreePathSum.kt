@@ -52,9 +52,9 @@ class BinaryTreePathSum {
         @JvmStatic
         fun main(args: Array<String>) {
             val arrays = arrayOf(
-                arrayOf(intArrayOf(1), intArrayOf(2, 3), intArrayOf(4, 5, 6,7)),
-                arrayOf(intArrayOf(12), intArrayOf(7, 1), intArrayOf(9, -1, 10, 5)),
-                arrayOf(intArrayOf(12), intArrayOf(7, 1), intArrayOf(9, -1, 10, 5)),
+                arrayOf(intArrayOf(1), intArrayOf(2,3), intArrayOf(4,5,6,7)),
+                arrayOf(intArrayOf(12), intArrayOf(7,1), intArrayOf(9,-1,10,5)),
+                arrayOf(intArrayOf(12), intArrayOf(7,1), intArrayOf(9,-1,10,5)),
             )
             val sums = arrayOf(10, 23, 16)
             for (i in arrays.indices) {

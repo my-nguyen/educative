@@ -63,8 +63,8 @@ class LevelOrderSuccessor {
         fun main(args: Array<String>) {
             val arrays = arrayOf(
                 arrayOf(intArrayOf(1), intArrayOf(2, 3), intArrayOf(4, 5, -1, -1)),
-                arrayOf(intArrayOf(12), intArrayOf(7, 1), intArrayOf(9, -1, 10, 5)),
-                arrayOf(intArrayOf(12), intArrayOf(7, 1), intArrayOf(9, -1, 10, 5)),
+                arrayOf(intArrayOf(12), intArrayOf(7,1), intArrayOf(9,-1,10,5)),
+                arrayOf(intArrayOf(12), intArrayOf(7,1), intArrayOf(9,-1,10,5)),
             )
             val keys = arrayOf(3, 9, 12)
             for (i in arrays.indices) {

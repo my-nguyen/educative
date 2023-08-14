@@ -29,8 +29,8 @@ class ConnectAllLevelOrderSiblings {
         @JvmStatic
         fun main(args: Array<String>) {
             val arrays = arrayOf(
-                arrayOf(intArrayOf(1), intArrayOf(2, 3), intArrayOf(4, 5, 6,7)),
-                arrayOf(intArrayOf(12), intArrayOf(7, 1), intArrayOf(-1, 9, 10, 5)),
+                arrayOf(intArrayOf(1), intArrayOf(2,3), intArrayOf(4,5,6,7)),
+                arrayOf(intArrayOf(12), intArrayOf(7,1), intArrayOf(-1,9,10,5)),
             )
             for (array in arrays) {
                 val head = TreeNode.build(array)

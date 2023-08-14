@@ -16,10 +16,10 @@ class InsertInterval {
     // the new interval. Let’s call the new interval ‘a’ and the first interval with the above condition ‘b’. There are
     // five possibilities:
     // 1. 'a' and 'b' don't overlap, we simply insert 'a'
-    // 2. a.start < b.start, a.end < b.end, the new merged interval will be c(a.start, a.end)
+    // 2. a.start < b.start, a.end < b.end, the new merged interval will be c(a.start, b.end)
     // 3. a.start < b.start, b.end < a.end, the new merged interval will be c(a.start, a.end)
-    // 3. b.start < a.start, b.end < a.end, the new merged interval will be c(a.start, a.end)
-    // 5. b.start < a.start, a.end < b.end, the new merged interval will be c(a.start, a.end)
+    // 3. b.start < a.start, b.end < a.end, the new merged interval will be c(b.start, a.end)
+    // 5. b.start < a.start, a.end < b.end, the new merged interval will be c(b.start, b.end)
     // The above clearly shows the merging approach. To handle all four merging scenarios, we need to do something like this:
     //    c.start = min(a.start, b.start)
     //    c.end = max(a.end, b.end)
